@@ -1,0 +1,115 @@
+SHOW DATABASE;
+SHOW error;
+SHOW TABLE;
+SHOW warning;							
+CREATE DATABASE dataBase_name;
+DROP DATABASE dataBase_name;
+
+
+CREATE TABLE table_name(
+	column_name dataType(size)
+);
+
+CREATE TABLE teacher (
+	ID int(4) NOT NULL AUTO_INCREMENT,
+    Name varchar(15) NOT NULL,
+    Selary double(10,2)
+);
+
+
+DESCRIBE student_info;
+
+All Data Remove
+TRUNCATE TABLE table_name;
+
+
+RENAME TABLE old_table TO new_table
+
+
+INSERT INTO student_info (Name,Roll,Regestation,Gender,age,CGPA)
+VALUE ('Md Ehasan Ali', 416875,1502045702,'Male',20,3.54);
+
+INSERT INTO student_info
+VALUE ('Md Ehasan Ali', 416875,1502045702,'Male',20,3.54);
+
+SELECT Collumn_Name FROM `table_name`;
+SELECT * FROM `table_name`;
+
+
+SELECT DISTINCT Collumn_Name FROM table_name;								Repeat data gula aksathe dekha
+
+SELECT * FROM table_name LIMIT 2,5;											koto gula ignore korbe r koto gula data show korbe
+	
+
+
+SELECT Name FROM table_name ORDER BY Name;									Shorting Data Ascending 
+SELECT * FROM table_name ORDER BY Name;
+
+SELECT Name FROM table_name ORDER BY Name DESC;								Shorting Data Descending
+SELECT * FROM table_name ORDER BY Name DESC;
+
+
+SELECT DISTINCT CGPA FROM student_info WHERE age=20 ORDER BY CGPA;					WHERE Clause Condition
+
+SELECT `Name`, `Roll`, `age` FROM `student_info` WHERE age BETWEEN 15 AND 20;		And or not logical oparetor
+SELECT `Name`, `Roll`, `age` FROM `student_info` WHERE age!= 20;					not oparetor
+
+SELECT * FROM `student_info` WHERE age='Male' OR (CGPA >= 3.50);					and or not 
+SELECT * FROM  student_info WHERE ID >= 105 AND (CGPA = 3.50 OR City = 'Dhaka');
+
+SELECT * FROM `student_info` WHERE City = 'Dhaka' OR City = 'Chapai' OR City = 'Rajshahi';				in o not in
+SELECT * FROM `student_info` WHERE City NOT IN ('Dhaka','Chapai');
+
+
+Search Like Keyword
+SELECT * FROM `student_info` WHERE Name LIKE 'm%'; '%Word/letter%' '__Word/letter%' '%Word/letter__'	Like Keyword
+
+
+AS Keyword holo Field name change kora/ Custon name create
+SELECT Name AS "Full Name", City AS Jela FROM student_info;
+
+Update keyword
+UPDATE table_name SET Collumn_Name = 'VALUE' WHERE Condition;
+
+Delete keyword
+DELETE FROM `table_name` WHERE Condition
+
+
+Aggergate Functions
+SELECT COUNT(Selary), MAX(Selary), MIN(Selary), AVG(Selary), SUM(Selary) FROM teacher;
+
+Function Keyword
+SELECT UPPER(Name), Roll, CGPA FROM table_name;
+SELECT LOWER(Name), Roll, CGPA FROM table_name;
+
+
+
+SUB QUAEY
+SELECT * FROM teacher WHERE Selary > (SELECT AVG(Selary) FROM teacher);
+SELECT * FROM student_info WHERE age > (SELECT AVG(age) FROM student_info);
+
+
+Alter TABLE add remove rename
+ALTER TABLE teacher ADD dept1 varchar(10);
+ALTER TABLE teacher CHANGE Old_Colluam New_Colluam varchar(10);
+ALTER TABLE teacher DROP COLUMN Age;
+
+
+
+
+GROUP Keyword
+
+SELECT *
+FROM student_info
+WHERE Condition
+GROUP BY City
+ORDER BY City
+SELECT * FROM student_info GROUP BY City ORDER BY City DESC
+
+
+Joining Tables
+SELECT student_details.ID, Name, Roll, Reg_number, Age, Gender,City
+FROM student_details,student_details_2
+WHERE student_details.ID = student_details_2.ID
+
+ 
