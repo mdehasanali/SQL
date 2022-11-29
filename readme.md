@@ -96,5 +96,5 @@ SELECT * FROM table_name LIMIT 2,5;
 ### Filtering data command
 
 ```sql
-SELECT * FROM table_name LIMIT 2,5;
+SELECT DISTINCT Collumn_Name FROM table_name;
 ```
