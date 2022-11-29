@@ -1,6 +1,6 @@
 SHOW DATABASE;
 SHOW error;
-SHOW TABLE;
+SHOW TABLE;-----------
 SHOW warning;							
 CREATE DATABASE dataBase_name;
 DROP DATABASE dataBase_name;
@@ -11,9 +11,10 @@ CREATE TABLE table_name(
 );
 
 CREATE TABLE teacher (
-	ID int(4) NOT NULL AUTO_INCREMENT,
-    Name varchar(15) NOT NULL,
-    Selary double(10,2)
+	ID int(4) NOT NULL AUTO_INCREMENT ,
+    Name varchar(15) NOT NULL DEFAULT 'Sandnes',
+    Selary double(10,2),
+    OrderDate date DEFAULT GETDATE()
 );
 
 
