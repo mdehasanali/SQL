@@ -12,7 +12,7 @@ SHOW DATABASE;
 SHOW ERRORS;
 ```
 
-### Database Error command
+### Database WARNINGS command
 
 ```sql
 SHOW WARNINGS;
@@ -79,7 +79,8 @@ VALUES(value-1, value-2, value-3),
 ### Insert data Showing command
 
 ```sql
-SELECT * FROM `table_name`;
+SELECT *
+FROM `table_name`;
 ```
 
 ```sql
@@ -90,11 +91,53 @@ FROM `table_name`;
 ### Limit command
 
 ```sql
-SELECT * FROM table_name LIMIT 2,5;
+SELECT *
+FROM table_name
+LIMIT 2,5;
 ```
 
 ### Filtering data command
 
 ```sql
-SELECT DISTINCT Collumn_Name FROM table_name;
+SELECT  Collumn_Name
+FROM table_name
+DISTINCT;
+```
+
+### ORDER BY command by Ascending Data
+
+```sql
+SELECT * FROM
+table_name
+ORDER BY column_name;
+```
+
+```sql
+SELECT column_name
+FROM table_name
+ORDER BY column_name;
+```
+
+### ORDER BY command by Descending Data
+
+```sql
+SELECT *
+FROM table_name
+ORDER BY column_name
+DESC;
+```
+
+```sql
+SELECT column_name
+FROM table_name
+ORDER BY column_name
+DESC;
+```
+
+### WHERE Condition Chack command
+
+```sql
+SELECT *
+FROM table_name
+WHERE condition;
 ```
