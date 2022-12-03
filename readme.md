@@ -141,3 +141,71 @@ SELECT *
 FROM table_name
 WHERE condition;
 ```
+
+### AS Keyword / Custom name create command
+
+```sql
+SELECT
+column_name AS "Custom_column_name",
+column_name AS Custom_column_name
+FROM student_info;
+```
+
+### Update Keyword command
+
+```sql
+SELECT
+UPDATE table_name
+SET Collumn_Name = 'VALUE'
+WHERE Condition;
+```
+
+### Delete Keyword command
+
+```sql
+DELETE
+FROM `table_name`
+WHERE Condition
+```
+
+### Aggergate Functions Keyword command
+
+```sql
+SELECT
+COUNT(Collumn_Name),
+MAX(Collumn_Name),
+MIN(Collumn_Name),
+AVG(Collumn_Name),
+SUM(Collumn_Name)
+FROM table_name;
+```
+
+### Aggergate Functions Keyword command
+
+```sql
+SELECT
+    *
+FROM
+    table_name
+WHERE
+    Collumn_Name =>(
+    SELECT
+        Collumn_Name
+    FROM
+        table_name
+);
+```
+
+```sql
+SELECT
+    *
+FROM
+    table_name
+WHERE
+    age >(
+    SELECT
+        AVG(age)
+    FROM
+        table_name
+);
+```
