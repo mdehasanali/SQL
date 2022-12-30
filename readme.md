@@ -180,7 +180,7 @@ SUM(Collumn_Name)
 FROM table_name;
 ```
 
-### Aggergate Functions Keyword command
+### SUB QUAEY Functions Keyword command
 
 ```sql
 SELECT
@@ -208,4 +208,60 @@ WHERE
     FROM
         table_name
 );
+```
+
+### Alter TABLE Add command
+
+```sql
+ALTER TABLE
+    teacher ADD dept1 VARCHAR(10);
+```
+
+### Alter TABLE Rename command
+
+```sql
+ALTER TABLE
+    teacher CHANGE Old_Colluam New_Colluam VARCHAR(10);
+```
+
+### Alter TABLE Remove command
+
+```sql
+ALTER TABLE
+    teacher
+DROP COLUMN
+    Age;
+```
+
+### GROUP Keyword command
+
+```sql
+SELECT
+    *
+FROM
+    student_info
+GROUP BY
+    City
+ORDER BY
+    City
+DESC
+
+```
+
+### Joining Tables Keyword command
+
+```sql
+SELECT
+    student_details.ID,
+    NAME,
+    Roll,
+    Reg_number,
+    Age,
+    Gender,
+    City
+FROM
+    student_details,
+    student_details_2
+WHERE
+    student_details.ID = student_details_2.ID
 ```
